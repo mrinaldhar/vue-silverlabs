@@ -41,11 +41,11 @@ body, html {
 	color: white;
 }
 h1 {
-	font-size: 1.5em;
+	font-size: 1.7em;
 	font-weight: normal;
 	margin-top: 20px;
 	padding-top: 0px;
-	font-family: gotham;
+	font-family: myriadl;
 	letter-spacing: 2px;
 }
 .header {
@@ -149,6 +149,7 @@ padding-bottom: 5px;
 	text-transform: uppercase;
 	padding-right: 20px;
 	padding-left: 20px;
+	/*box-shadow: 0 0 3px black;*/
 }
 .rounded-btn:hover {
 	background-color: rgba(0,0,0,0.7);
@@ -161,22 +162,48 @@ padding-bottom: 5px;
 	opacity: 0;
 }
 .bottom_info {
-	/*border-top: 2px solid white;*/
+	border-top: 3px solid rgba(255,255,255,1);
+	background-color: rgba(0,0,0,0.8);
 	width: 100%;
-	height: 30%;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	/*height: 20%;*/
+	/*left: 10%;*/
 	position: fixed;
 	display: none;
 	bottom: 0px;
+	color: white;
+	font-family: myriadl;
+	font-size: 1.1em;
+	line-height: 1.7em;
+	text-align: center;
+	/*text-transform: uppercase;*/
 }
 small {
 	font-weight: normal;
 	font-size: 0.8em;
+	color: rgba(255,255,255,0.8);
 	text-transform: uppercase;
+	text-decoration: underline;
 }
 .bottom_info ul {
 	list-style-type: none;
 	padding: 0px;
 	margin:0px;
+
+}
+.bottom_info ul li a {
+	/*opacity: 0.8;*/
+}
+.bottom_info ul li a:hover {
+	opacity: 1;
+}
+.bottom_info tr td {
+	padding-left: 30px;
+}
+.bottom_info a {
+	color: white;
+	text-decoration: none;
 }
 	</style>
 </head>
@@ -202,28 +229,26 @@ small {
 		<td width="30%">
  <ul>
 
-              <li><a href="#">Vue for iOS</a></li>
-              <li><a href="#">Vue for Android</a></li>
-              <li><a href="#">Terms of use</a></li>
-              <li><a href="#">Privacy Policy</a></li>
+              <li><a class="anim" href="#">Vue for iOS</a></li>
+              <li><a class="anim" href="#">Vue for Android</a></li>
+              <li><a class="anim" href="#">Terms of use</a></li>
+              <li><a class="anim" href="#">Privacy Policy</a></li>
             </ul>
 		</td>
 		<td width="30%">
- <small>Company</small>
             <ul>
-              <li><a href="team.html">About us</a></li>
-              <li><a href="https://medium.com/@vueitnow">Blog</a></li>
-              <li><a href="jobs.html">Jobs</a></li>
-              <li><a href="#">Download press kit</a></li>
+              <li><a class="anim" href="team.html">About us</a></li>
+              <li><a class="anim" href="https://medium.com/@vueitnow">Blog</a></li>
+              <li><a class="anim" href="jobs.html">Jobs</a></li>
+              <li><a class="anim" href="#">Download press kit</a></li>
             </ul>
 		</td>
 		<td width="30%">
-<small>Media</small>
             <ul>
-              <li><a href="#">Email</a></li>
-              <li><a href="#">Facebook</a></li>
-              <li><a href="#">Twitter</a></li>
-              <li><a href="#">Instagram</a></li>
+              <li><a class="anim" href="#">Email</a></li>
+              <li><a class="anim" href="#">Facebook</a></li>
+              <li><a class="anim" href="#">Twitter</a></li>
+              <li><a class="anim" href="#">Instagram</a></li>
             </ul>
 		</td>
 	</tr>
@@ -263,7 +288,7 @@ $(document).ready(function() {
 function init() {
 	$('.container').animate({'height': '75%'}, 500, function() {
 	$('#btn_signup').animate({'opacity': '1'}, 500);
-	// $('.bottom_info').fadeIn();
+	$('.bottom_info').fadeIn();
 	});
 }
 </script>
