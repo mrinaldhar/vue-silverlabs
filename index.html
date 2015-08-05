@@ -9,6 +9,14 @@
 	src: url('./fonts/myriadl.otf');
 	font-family: myriadl;
 }
+@font-face {
+	src: url('./fonts/exo.otf');
+	font-family: exo;
+}
+@font-face {
+	src: url('./fonts/gotham.ttf');
+	font-family: gotham;
+}
 body, html {
 	padding: 0px;
 	margin: 0px;
@@ -19,8 +27,12 @@ body, html {
 }
 
 .logo-img {
+	width: 10%;
+	margin-bottom: 20px;
+}
+.logo-text {
 	width: 20%;
-	margin-bottom: 50px;
+	margin-bottom: 20px;
 }
 .container {
 	text-align: center;
@@ -30,31 +42,58 @@ body, html {
 }
 h1 {
 	font-size: 1.5em;
-	/*display: none;*/
 	font-weight: normal;
-	margin-top: 0px;
+	margin-top: 20px;
+	padding-top: 0px;
+	font-family: gotham;
+	letter-spacing: 2px;
 }
-.navbar {
+.header {
 	position: fixed;
 	top: 0px;
+	padding-top: 20px;
+	background-color: rgba(0,0,0,0.8);
+	width: 100%;
+	z-index: 999;
+	display: none;
+	padding: 0px;
+	margin: 0px;
+	border-collapse: collapse;
+	text-align: center;
+	box-shadow: 0 0 3px black;
+}
+.logo-img-top {
+	height: 8%;
+	margin-top: 10px;
+	margin-bottom: 5px;
+
+}
+.logo-text-top {
+	height: 5%;
+	margin-bottom: 5px;
+	margin-top: 10px;
+
+}
+.navbar {
 	list-style-type: none;
 	padding: 0px;
 	margin: 0px;
-	width: 100%;
-	background-color: rgba(0,0,0,0.5);
-	display: none;
+	background-color: transparent;
+	font-size: 0.8em;
+	text-transform: uppercase;
+	border-top: 2px solid rgba(218, 86, 152, 1);
 }
 .navbar li {
 	display: inline-block;
 	width: 14%;
-	font-family: myriadl;
+	font-family: exo;
 	color: white;
 	text-align: center;
 }
 .navbar li a {
-	padding: 20px;
-	padding-top: 20px;
-	padding-bottom: 20px;
+padding-top: 5px;
+padding-bottom: 5px;
+
 		font-size: 1em;
 	box-sizing: border-box;
 	display: block;
@@ -62,8 +101,9 @@ h1 {
 	text-decoration: none;
 	color: white;
 }
-.navbar li:hover {
-	background-color: rgba(0,0,0,0.6);
+.navbar li a:hover {
+	background-color: rgba(255,255,255,0.8);
+	color: black;
 }
 #top-shadow {
 	position: fixed;
@@ -71,6 +111,7 @@ h1 {
 	background-color: rgba(0,0,0,0.5);
 	height: 10px;
 	width: 100%;
+	/*display: none;*/
 }
 #bottom-shadow {
 	position: fixed;
@@ -88,38 +129,142 @@ h1 {
 .container tr td {
 	padding: 20px;
 	border-collapse: collapse;
-	text-shadow: 0 0 1px black;
+	/*text-shadow: 0 0 1px black;*/
+}
+.anim {
+		-o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  /* ...and now for the proper property */
+  transition:.5s;
+}
+.rounded-btn {
+	background-color: transparent;
+	padding: 10px;
+	border: 2px solid white;
+	border-radius: 10px;
+	color: white;
+	font-family: exo;
+	text-transform: uppercase;
+	padding-right: 20px;
+	padding-left: 20px;
+}
+.rounded-btn:hover {
+	background-color: rgba(0,0,0,0.7);
+	color: white;
+	cursor: pointer;
+}
+#btn_signup {
+	margin-top: 20px;
+
+	opacity: 0;
+}
+.bottom_info {
+	/*border-top: 2px solid white;*/
+	width: 100%;
+	height: 30%;
+	position: fixed;
+	display: none;
+	bottom: 0px;
+}
+small {
+	font-weight: normal;
+	font-size: 0.8em;
+	text-transform: uppercase;
+}
+.bottom_info ul {
+	list-style-type: none;
+	padding: 0px;
+	margin:0px;
 }
 	</style>
 </head>
 <body>
-<table id="page1" class="container">
+<table class="container">
 	<tr>
 		<td width="100%" style="vertical-align: bottom;">
 			<img src="./img/vue-logo.png" class="logo-img" />
-			<img src="./img/vue-text.png" class="logo-img" />
+			<img src="./img/vue-text.png" class="logo-text" />
+			<h1>Love the way you look!</h1>
+
 		</td>
 	</tr>
 	<tr>
 		<td width="100%" style="vertical-align: top;" colspan="2">
-			<h1>Love the way you look!</h1>
+
+			<a href="signup.html"><button id="btn_signup" class="rounded-btn anim">Sign up for a Private Beta</button></a>
 		</td>
 	</tr>
 </table>
-<ul class="navbar">
-<li><a href="index.html">Home</a></li>
-<li><a href="index.html">Stylists &amp; Ambassadors</a></li>
-<li><a href="index.html">Jobs</a></li>
-<li><a href="index.html">Team</a></li>
-<li><a href="index.html">Contact</a></li>
-<li><a href="index.html">Blog</a></li>
-<li><a href="index.html">Get Vue now!</a></li>
-</ul>
+<table class="bottom_info">
+	<tr>
+		<td width="30%">
+ <ul>
 
+              <li><a href="#">Vue for iOS</a></li>
+              <li><a href="#">Vue for Android</a></li>
+              <li><a href="#">Terms of use</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+		</td>
+		<td width="30%">
+ <small>Company</small>
+            <ul>
+              <li><a href="team.html">About us</a></li>
+              <li><a href="https://medium.com/@vueitnow">Blog</a></li>
+              <li><a href="jobs.html">Jobs</a></li>
+              <li><a href="#">Download press kit</a></li>
+            </ul>
+		</td>
+		<td width="30%">
+<small>Media</small>
+            <ul>
+              <li><a href="#">Email</a></li>
+              <li><a href="#">Facebook</a></li>
+              <li><a href="#">Twitter</a></li>
+              <li><a href="#">Instagram</a></li>
+            </ul>
+		</td>
+	</tr>
+</table>
+<table class="header" width="100%">
+	<tr>
+		<td width="100%">
+			<img src="./img/vue-logo.png" class="logo-img-top" />
+			<img src="./img/vue-text.png" class="logo-text-top" />
+		</td>
+	</tr>
+	<tr><td width="100%">
+<ul class="navbar">
+<li><a href="index.html" class="anim">Home</a></li>
+<li><a href="index.html" class="anim">Stylists &amp; Ambassadors</a></li>
+<li><a href="index.html" class="anim">Jobs</a></li>
+<li><a href="index.html" class="anim">Team</a></li>
+<li><a href="index.html" class="anim">Contact</a></li>
+<li><a href="index.html" class="anim">Blog</a></li>
+<li><a href="index.html" class="anim">Get Vue now!</a></li>
+</ul>
+</td></tr>
+</table>
+</div>
 <div id="top-shadow">
 </div>
 <div id="bottom-shadow">
 </div>
 </body>
 <script src="js/jquery.js"></script>
+<script src="js/jqueryui.js"></script>
+
+<script>
+$(document).ready(function() {
+	window.setTimeout(init, 2000);
+});
+function init() {
+	$('.container').animate({'height': '75%'}, 500, function() {
+	$('#btn_signup').animate({'opacity': '1'}, 500);
+	// $('.bottom_info').fadeIn();
+	});
+}
+</script>
 </html>
