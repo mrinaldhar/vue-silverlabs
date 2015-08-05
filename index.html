@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+<head>
+	<title>
+		Vue - from Silverlabs
+	</title>
+	<style>
+@font-face {
+	src: url('./fonts/myriadl.otf');
+	font-family: myriadl;
+}
+body, html {
+	padding: 0px;
+	margin: 0px;
+	overflow: hidden;
+	background-color: rgba(218, 86, 152, 1);
+	height: 100%;
+	font-family: myriadl;
+}
+
+.logo-img {
+	width: 20%;
+	margin-bottom: 50px;
+}
+.container {
+	text-align: center;
+	width: 100%;
+	height: 100%;
+	color: white;
+}
+h1 {
+	font-size: 1.5em;
+	/*display: none;*/
+	font-weight: normal;
+	margin-top: 0px;
+}
+.navbar {
+	position: fixed;
+	top: 0px;
+	list-style-type: none;
+	padding: 0px;
+	margin: 0px;
+	width: 100%;
+	background-color: rgba(0,0,0,0.5);
+	display: none;
+}
+.navbar li {
+	display: inline-block;
+	width: 14%;
+	font-family: myriadl;
+	color: white;
+	text-align: center;
+}
+.navbar li a {
+	padding: 20px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+		font-size: 1em;
+	box-sizing: border-box;
+	display: block;
+	height: 100%;
+	text-decoration: none;
+	color: white;
+}
+.navbar li:hover {
+	background-color: rgba(0,0,0,0.6);
+}
+#top-shadow {
+	position: fixed;
+	top: 0px;
+	background-color: rgba(0,0,0,0.5);
+	height: 10px;
+	width: 100%;
+}
+#bottom-shadow {
+	position: fixed;
+	bottom: 0px;
+	background-color: rgba(0,0,0,0.5);
+	height: 10px;
+	width: 100%;
+}
+.leftcol {
+	text-align: right;
+}
+.rightcol {
+	text-align: left;
+}
+.container tr td {
+	padding: 20px;
+	border-collapse: collapse;
+	text-shadow: 0 0 1px black;
+}
+	</style>
+</head>
+<body>
+<table id="page1" class="container">
+	<tr>
+		<td width="100%" style="vertical-align: bottom;">
+			<img src="./img/vue-logo.png" class="logo-img" />
+			<img src="./img/vue-text.png" class="logo-img" />
+		</td>
+	</tr>
+	<tr>
+		<td width="100%" style="vertical-align: top;" colspan="2">
+			<h1>Love the way you look!</h1>
+		</td>
+	</tr>
+</table>
+<ul class="navbar">
+<li><a href="index.html">Home</a></li>
+<li><a href="index.html">Stylists &amp; Ambassadors</a></li>
+<li><a href="index.html">Jobs</a></li>
+<li><a href="index.html">Team</a></li>
+<li><a href="index.html">Contact</a></li>
+<li><a href="index.html">Blog</a></li>
+<li><a href="index.html">Get Vue now!</a></li>
+</ul>
+
+<div id="top-shadow">
+</div>
+<div id="bottom-shadow">
+</div>
+</body>
+<script src="js/jquery.js"></script>
+</html>
