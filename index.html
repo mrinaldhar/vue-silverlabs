@@ -20,7 +20,7 @@
 body, html {
 	padding: 0px;
 	margin: 0px;
-	overflow: hidden;
+	/*overflow: hidden;*/
 	background-color: rgba(218, 86, 152, 1);
 	height: 100%;
 	font-family: myriadl;
@@ -43,10 +43,11 @@ body, html {
 h1 {
 	font-size: 1.7em;
 	font-weight: normal;
-	margin-top: 20px;
+	margin-top: 30px;
 	padding-top: 0px;
 	font-family: myriadl;
 	letter-spacing: 2px;
+	margin-bottom:20px;
 }
 .header {
 	position: fixed;
@@ -157,11 +158,11 @@ padding-bottom: 5px;
 	cursor: pointer;
 }
 #btn_signup {
-	margin-top: 20px;
+	/*margin-top: 20px;*/
 
 	opacity: 0;
 }
-.bottom_info {
+.footer {
 	border-top: 3px solid rgba(255,255,255,1);
 	background-color: rgba(0,0,0,0.8);
 	width: 100%;
@@ -169,14 +170,20 @@ padding-bottom: 5px;
 	padding-bottom: 20px;
 	/*height: 20%;*/
 	/*left: 10%;*/
-	position: fixed;
+	position: absolute;
 	display: none;
 	bottom: 0px;
+	text-align: center;
+
+	/*top: 80%;*/
+}
+.bottom_info {
+	width: 80%;
 	color: white;
 	font-family: myriadl;
-	font-size: 1.1em;
 	line-height: 1.7em;
 	text-align: center;
+	margin: 0 auto;
 	/*text-transform: uppercase;*/
 }
 small {
@@ -194,12 +201,13 @@ small {
 }
 .bottom_info ul li a {
 	/*opacity: 0.8;*/
+	font-size: 0.9em;
 }
 .bottom_info ul li a:hover {
 	opacity: 1;
 }
 .bottom_info tr td {
-	padding-left: 30px;
+	/*padding-left: 30px;*/
 }
 .bottom_info a {
 	color: white;
@@ -212,47 +220,49 @@ small {
 	<tr>
 		<td width="100%" style="vertical-align: bottom;">
 			<img src="./img/vue-logo.png" class="logo-img" />
-			<img src="./img/vue-text.png" class="logo-text" />
-			<h1>Love the way you look!</h1>
+			<!-- <img src="./img/vue-text.png" class="logo-text" /> -->
 
 		</td>
 	</tr>
 	<tr>
 		<td width="100%" style="vertical-align: top;" colspan="2">
+			<h1 id="tag">Feel beautiful!</h1>
 
-			<a href="signup.html"><button id="btn_signup" class="rounded-btn anim">Sign up for a Private Beta</button></a>
+			<a href="https://docs.google.com/a/thesilverlabs.com/spreadsheets/d/1M7EEyyueaq-F3tixRM-SKYVozbouyos5g9uo8F1XIu8/edit?usp=sharing"><button id="btn_signup" class="rounded-btn anim">Get Invited to Vue</button></a>
 		</td>
 	</tr>
 </table>
+<div class="footer">
 <table class="bottom_info">
 	<tr>
 		<td width="30%">
  <ul>
-
-              <li><a class="anim" href="#">Vue for iOS</a></li>
-              <li><a class="anim" href="#">Vue for Android</a></li>
-              <li><a class="anim" href="#">Terms of use</a></li>
-              <li><a class="anim" href="#">Privacy Policy</a></li>
-            </ul>
-		</td>
-		<td width="30%">
-            <ul>
-              <li><a class="anim" href="team.html">About us</a></li>
+              <li><a class="anim" href="#">Home</a></li>
+              <li><a class="anim" href="#">Team</a></li>
               <li><a class="anim" href="https://medium.com/@vueitnow">Blog</a></li>
-              <li><a class="anim" href="jobs.html">Jobs</a></li>
-              <li><a class="anim" href="#">Download press kit</a></li>
+              <li><a class="anim" href="#">Jobs</a></li>
             </ul>
 		</td>
 		<td width="30%">
             <ul>
-              <li><a class="anim" href="#">Email</a></li>
-              <li><a class="anim" href="#">Facebook</a></li>
-              <li><a class="anim" href="#">Twitter</a></li>
-              <li><a class="anim" href="#">Instagram</a></li>
+              <li><a class="anim" href="#">Vue on iOS</a></li>
+              <li><a class="anim" href="#">Vue on Android</a></li>
+              <li><a class="anim" href="#">Terms of use</a></li>
+              <li><a class="anim" href="#">Privacy policy</a></li>
+            </ul>
+		</td>
+		<td width="30%">
+            <ul>
+              <li><a class="anim" href="facebook.com/vueitnow">Facebook</a></li>
+              <li><a class="anim" href="http://twitter.com/vueitnow">Twitter</a></li>
+              <li><a class="anim" href="#">@vueitnow on Snapchat</a></li>
+              <li><a class="anim" href="http://instagram.com/vueitnow">Instagram</a></li>
+
             </ul>
 		</td>
 	</tr>
 </table>
+</div>
 <table class="header" width="100%">
 	<tr>
 		<td width="100%">
@@ -288,7 +298,17 @@ $(document).ready(function() {
 function init() {
 	$('.container').animate({'height': '75%'}, 500, function() {
 	$('#btn_signup').animate({'opacity': '1'}, 500);
-	$('.bottom_info').fadeIn();
+	$('.footer').fadeIn();
+	});
+	window.setInterval(tagReload, 10000);
+}
+var tagLines = ["Feel beautiful!","Love the way you look!","Be yourself.", "Here's to the confident you!", "Love yourself.", "Fashion for the rest of us is here.", "Help others stay beautiful.", "Stay effortlessly trendy.", "Stay beautiful.", "Don't be afraid to be you." ];
+var tag_flag = 1;
+function tagReload() {
+	$('#tag').fadeOut(function() {
+		$('#tag').text(tagLines[tag_flag]);
+		tag_flag = ( tag_flag + 1 )%10;
+		$('#tag').fadeIn();
 	});
 }
 </script>
