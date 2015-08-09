@@ -1,0 +1,102 @@
+body, html {
+	padding: 0px;
+	margin: 0px;
+	overflow: hidden;
+	background-color: rgba(218, 86, 152, 1);
+	height: 100%;
+	font-family: myriadl;
+}
+
+.logo-img {
+	width: 10%;
+	margin-bottom: 20px;
+}
+.logo-text {
+	width: 20%;
+	margin-bottom: 20px;
+}
+.container {
+	text-align: center;
+	width: 100%;
+	height: 100%;
+	color: white;
+}
+
+
+#top-shadow {
+	position: fixed;
+	top: 0px;
+	background-color: rgba(0,0,0,0.5);
+	height: 10px;
+	width: 100%;
+	/*display: none;*/
+}
+#bottom-shadow {
+	position: fixed;
+	bottom: 0px;
+	background-color: rgba(0,0,0,0.5);
+	height: 10px;
+	width: 100%;
+}
+.leftcol {
+	text-align: right;
+}
+.rightcol {
+	text-align: left;
+}
+.container tr td {
+	padding: 20px;
+	border-collapse: collapse;
+	/*text-shadow: 0 0 1px black;*/
+}
+
+#btn_signup {
+	/*margin-top: 20px;*/
+
+	opacity: 0;
+}
+.footer {
+	border-top: 3px solid rgba(255,255,255,1);
+	background-color: rgba(0,0,0,0.8);
+	width: 100%;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	/*height: 20%;*/
+	/*left: 10%;*/
+	position: absolute;
+	display: none;
+	bottom: 0px;
+	text-align: center;
+
+	/*top: 80%;*/
+}
+.bottom_info {
+	width: 80%;
+	color: white;
+	font-family: myriadl;
+	line-height: 1.7em;
+	text-align: center;
+	margin: 0 auto;
+	/*text-transform: uppercase;*/
+}
+
+.bottom_info ul {
+	list-style-type: none;
+	padding: 0px;
+	margin:0px;
+
+}
+.bottom_info ul li a {
+	/*opacity: 0.8;*/
+	font-size: 0.9em;
+}
+.bottom_info ul li a:hover {
+	opacity: 1;
+}
+.bottom_info tr td {
+	/*padding-left: 30px;*/
+}
+.bottom_info a {
+	color: white;
+	text-decoration: none;
+}
