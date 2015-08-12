@@ -6,19 +6,22 @@
 	</title>
 	<link rel="stylesheet" href="css/index.css" />
 	<link rel="stylesheet" href="css/standard.css" />
-	
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
 </head>
 <body>
 <table class="container">
 	<tr>
-		<td width="100%" style="vertical-align: bottom;">
+		<td width="100%" style="vertical-align: center;">
 			<img src="./img/vue-logo.png" class="logo-img" />
 			<!-- <img src="./img/vue-text.png" class="logo-text" /> -->
 
 		</td>
 	</tr>
-	<tr>
-		<td width="100%" style="vertical-align: top;" colspan="2">
+</table>
+<table class="invitation">
+<tr>
+		<td width="100%" style="vertical-align: center;">
 			<h1 id="tag">Feel beautiful!</h1>
 
 			<a href="https://docs.google.com/a/thesilverlabs.com/spreadsheets/d/1M7EEyyueaq-F3tixRM-SKYVozbouyos5g9uo8F1XIu8/edit?usp=sharing"><button id="btn_signup" class="rounded-btn anim">Get Invited to Vue</button></a>
@@ -26,7 +29,7 @@
 	</tr>
 </table>
 <div class="footer">
-<table class="bottom_info">
+<table class="bottom_info media_large">
 	<tr>
 		<td width="30%">
  <ul>
@@ -55,6 +58,26 @@
 		</td>
 	</tr>
 </table>
+<table class="bottom_info media_small">
+	<tr>
+		<td width="100%">
+ 			<ul id="ul_small" style="width:100%;">
+              <li><a class="anim" href="index.html">Home</a></li>
+              <li><a class="anim" href="#">Team</a></li>
+              <li><a class="anim" href="https://medium.com/@vueitnow">Blog</a></li>
+              <li><a class="anim" href="jobs.html">Jobs</a></li>
+              <li><a class="anim" href="#">Vue on iOS</a></li>
+              <li><a class="anim" href="#">Vue on Android</a></li>
+              <li><a class="anim" href="#">Terms of use</a></li>
+              <li><a class="anim" href="#">Privacy policy</a></li>
+              <li><a class="anim" href="facebook.com/vueitnow">Facebook</a></li>
+              <li><a class="anim" href="http://twitter.com/vueitnow">Twitter</a></li>
+              <li><a class="anim" href="#">@vueitnow on Snapchat</a></li>
+              <li><a class="anim" href="http://instagram.com/vueitnow">Instagram</a></li>
+            </ul>
+		</td>
+	</tr>
+</table>
 </div>
 
 </div>
@@ -71,11 +94,7 @@ $(document).ready(function() {
 	window.setTimeout(init, 2000);
 });
 function init() {
-	$('.container').animate({'height': '75%'}, 500, function() {
-	$('#btn_signup').animate({'opacity': '1'}, 500);
-	$('.footer').fadeIn();
-	});
-	window.setInterval(tagReload, 5000);
+	window.setInterval(tagReload, 10000);
 }
 var tagLines = ["Feel beautiful!","Love the way you look!","Be yourself.", "Here's to the confident you!", "Love yourself.", "Fashion for the rest of us is here.", "Help others stay beautiful.", "Stay effortlessly trendy.", "Stay beautiful.", "Don't be afraid to be you." ];
 var tag_flag = 1;

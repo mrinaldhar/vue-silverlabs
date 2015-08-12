@@ -1,20 +1,17 @@
 body, html {
 	padding: 0px;
 	margin: 0px;
-	overflow: hidden;
 	background-color: rgba(218, 86, 152, 1);
 	height: 100%;
 	font-family: myriadl;
 }
 
 .logo-img {
-	width: 10%;
+	width: 150px;
+	max-width: 30%;
 	margin-bottom: 20px;
 }
-.logo-text {
-	width: 20%;
-	margin-bottom: 20px;
-}
+
 .container {
 	text-align: center;
 	width: 100%;
@@ -52,28 +49,28 @@ body, html {
 
 #btn_signup {
 	/*margin-top: 20px;*/
-
-	opacity: 0;
 }
 .footer {
-	border-top: 3px solid rgba(255,255,255,1);
-	background-color: rgba(0,0,0,0.8);
+	border-top: 3px solid rgba(0,0,0,1);
+	background-color: rgba(255,255,255,0.8);
 	width: 100%;
 	padding-top: 20px;
 	padding-bottom: 20px;
 	/*height: 20%;*/
 	/*left: 10%;*/
 	position: absolute;
-	display: none;
-	bottom: 0px;
+	/*display: none;*/
+	/*bottom: 0px;*/
+	top: 100%;
 	text-align: center;
 
 	/*top: 80%;*/
 }
 .bottom_info {
 	width: 80%;
-	color: white;
-	font-family: myriadl;
+	/*color: white;*/
+	color: black;
+	font-family: neue;
 	line-height: 1.7em;
 	text-align: center;
 	margin: 0 auto;
@@ -88,7 +85,8 @@ body, html {
 }
 .bottom_info ul li a {
 	/*opacity: 0.8;*/
-	font-size: 0.9em;
+	font-size: 1.1em;
+	color: black;
 }
 .bottom_info ul li a:hover {
 	opacity: 1;
@@ -99,4 +97,23 @@ body, html {
 .bottom_info a {
 	color: white;
 	text-decoration: none;
+}
+.invitation {
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+	margin-bottom: 7%;
+	text-align: center;
+	color: white;
+}
+
+ul#ul_small {
+	width: 100%;
+	text-align: center;
+}
+ul#ul_small li {
+	width: 100%;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	text-align: center;
 }

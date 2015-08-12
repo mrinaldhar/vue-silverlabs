@@ -1,4 +1,4 @@
-@font-face {
+/*@font-face {
 	src: url('../fonts/myriadl.otf');
 	font-family: myriadl;
 }
@@ -9,13 +9,31 @@
 @font-face {
 	src: url('../fonts/gotham.ttf');
 	font-family: gotham;
+}*/
+@font-face {
+	src: url('../fonts/neue.ttf');
+	font-family: neue;
+}
+.media_small {
+	display: none;
+}
+@-ms-viewport{
+  width: device-width;
+}
+@media (max-width: 600px) {
+	.media_large {
+		display: none;
+	}
+	.media_small {
+		display: block;
+	}
 }
 body, html {
 	padding: 0px;
 	margin: 0px;
 	background-color: rgba(218, 86, 152, 1);
 	/*height: 100%;*/
-	font-family: myriadl;
+	font-family: neue;
 }
 .header {
 	position: fixed;
@@ -56,7 +74,7 @@ body, html {
 .navbar li {
 	display: inline-block;
 	width: 14%;
-	font-family: exo;
+	font-family: neue;
 	color: white;
 	text-align: center;
 }
@@ -90,7 +108,7 @@ padding-bottom: 5px;
 	border: 2px solid white;
 	border-radius: 10px;
 	color: white;
-	font-family: exo;
+	font-family: neue;
 	text-transform: uppercase;
 	padding-right: 20px;
 	padding-left: 20px;
@@ -118,7 +136,7 @@ small {
 }
 h1 {
 	font-weight: normal;
-	font-family: myriadl;
+	font-family: neue;
 }
 .content {
 	position: absolute;
@@ -128,6 +146,7 @@ h1 {
 	width: 70%;
 }
 .page {
+	font-family: neue;
 	width: 100%;
 	border-radius: 3px;
 	box-sizing: border-box;
