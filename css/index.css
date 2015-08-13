@@ -3,12 +3,12 @@ body, html {
 	margin: 0px;
 	background-color: rgba(218, 86, 152, 1);
 	height: 100%;
-	font-family: myriadl;
+	font-family: neue;
 }
 
 .logo-img {
 	width: 150px;
-	max-width: 30%;
+	max-width: 20%;
 	margin-bottom: 20px;
 }
 
@@ -20,21 +20,6 @@ body, html {
 }
 
 
-#top-shadow {
-	position: fixed;
-	top: 0px;
-	background-color: rgba(0,0,0,0.5);
-	height: 10px;
-	width: 100%;
-	/*display: none;*/
-}
-#bottom-shadow {
-	position: fixed;
-	bottom: 0px;
-	background-color: rgba(0,0,0,0.5);
-	height: 10px;
-	width: 100%;
-}
 .leftcol {
 	text-align: right;
 }
@@ -49,6 +34,7 @@ body, html {
 
 #btn_signup {
 	/*margin-top: 20px;*/
+	font-size: 1.6em;
 }
 .footer {
 	border-top: 3px solid rgba(0,0,0,1);
@@ -102,18 +88,37 @@ body, html {
 	position: absolute;
 	bottom: 0px;
 	width: 100%;
-	margin-bottom: 7%;
+	margin-bottom: 80px;
 	text-align: center;
 	color: white;
 }
-
-ul#ul_small {
+	/*I have no idea why the code below works for centering. It just does. Look into it. */
+#ul_small {
 	width: 100%;
 	text-align: center;
+	padding: 0;
+	margin: 0;
 }
-ul#ul_small li {
+#ul_small li {
 	width: 100%;
 	padding-top: 5px;
 	padding-bottom: 5px;
 	text-align: center;
+}
+table.media_small {
+	width: 80%;
+	margin: 0 auto;
+	text-align: center;
+}
+table.media_small tr td {
+	width: 50%;
+	/*margin: 0 auto;*/
+	text-align: center;
+}
+@media (max-height: 500px) and (orientation: landscape) {
+.invitation {
+	width: 30%;
+	right: 20px;
+	margin-bottom: 50px;
+}
 }
