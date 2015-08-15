@@ -3,7 +3,8 @@ body, html {
 	margin: 0px;
 	background-color: rgba(218, 86, 152, 1);
 	height: 100%;
-	font-family: neue;
+	/*font-family: 'Roboto';*/
+	font-family: 'Roboto', sans-serif;
 }
 
 .logo-img {
@@ -34,7 +35,9 @@ body, html {
 
 #btn_signup {
 	/*margin-top: 20px;*/
-	font-size: 1.1em;
+	font-size: 1.0em;
+	letter-spacing: 0.8px;
+
 }
 .footer {
 	/*border-top: 3px solid rgba(0,0,0,1);*/
@@ -56,7 +59,7 @@ body, html {
 	width: 80%;
 	/*color: white;*/
 	color: black;
-	font-family: neue;
+	font-family: 'Roboto';
 	line-height: 1.7em;
 	text-align: center;
 	margin: 0 auto;
