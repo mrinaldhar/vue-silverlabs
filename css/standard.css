@@ -11,8 +11,12 @@
 	font-family: gotham;
 }*/
 @font-face {
-	src: url('../fonts/neue.ttf');
+	src: url('../fonts/myriadl.otf');
 	font-family: neue;
+}
+@font-face {
+	src: url('../fonts/neue-light.ttf');
+	font-family: neuel;
 }
 .media_small {
 	display: none;
@@ -164,13 +168,16 @@ h1 {
 	/*padding-top: 30px;*/
 }
 .page p {
-	font-size: 1em;
+	font-size: 1.1em;
 	padding-bottom: 10px;
 	line-height: 1.5em;
+	letter-spacing: 0.5px;
 	/*text-align: justify;*/
 }
 .page h1 {
-	font-size: 1.7em;
+	font-size: 1.8em;
+	/*letter-spacing: 0.5px;*/
+	
 	margin-bottom: 30px;
 }
 .selected-menu {
