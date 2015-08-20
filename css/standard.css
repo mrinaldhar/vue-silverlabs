@@ -198,33 +198,6 @@ h1 {
 	color: black;
 }
 
-@media (max-width: 1024px) {
-
-}
-
-@media (max-width: 640px) {
-
-	
-
-}
-
-@media (max-width: 480px) {
-	.page {
-	}
-
-
-
-
-}
-@media (max-width: 640px) {
-		#nav {
-		top: 80px;
-		line-height: 50px;
-	}
-	.content {
-		margin: 150px 6%;
-	}
-}
 #btn_topright {
 	line-height: 2em;
 	width: 100%;
@@ -273,4 +246,35 @@ h1 {
 	/*height: 5%;*/
 	max-width: 90px;
 
+}
+@media (max-width: 1024px) {
+
+}
+
+@media (max-width: 640px) {
+
+	
+
+}
+
+@media (max-width: 480px) {
+	.page {
+	}
+
+
+
+
+}
+@media (max-width: 780px) {
+		#nav {
+		top: 80px;
+		line-height: 50px;
+	}
+	#nav a {
+		margin-left: 0px;
+		margin-right: 0px;
+	}
+	.content {
+		margin: 150px 6%;
+	}
 }
