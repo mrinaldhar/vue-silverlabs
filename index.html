@@ -23,7 +23,7 @@
 <table class="invitation">
 <tr>
 		<td width="100%" style="vertical-align: center;">
-			<h1 id="tag">Feel beautiful!</h1>
+			<h1 id="tag"></h1>
 
 			<a href="http://goo.gl/forms/XyoI5tRTcm"><button id="btn_signup" class="rounded-btn anim">Get invited to Vue</button></a>
 		</td>
@@ -42,8 +42,8 @@
 		</td>
 		<td width="30%">
             <ul>
-              <li><a class="anim" href="#">Vue on iOS</a></li>
-              <li><a class="anim" href="#">Vue on Android</a></li>
+              <li><a class="anim" href="#">Vue on iOS (Coming soon)</a></li>
+              <li><a class="anim" href="#">Vue on Android (Coming soon)</a></li>
               <li><a class="anim" href="#">Terms of use</a></li>
               <li><a class="anim" href="#">Privacy policy</a></li>
             </ul>
@@ -92,13 +92,20 @@
 
 <script>
 $(document).ready(function() {
-	window.setTimeout(init, 2000);
+	randomTagLoad();
+	init();
 });
 function init() {
-	window.setInterval(tagReload, 10000);
+	window.setInterval(tagReload, 5000);
 }
-var tagLines = ["Feel beautiful!","Love the way you look!","Be yourself.", "Here's to the confident you!", "Love yourself.", "Fashion for the rest of us", "Help others stay beautiful.", "Stay effortlessly trendy.", "Stay beautiful.", "Don't be afraid to be you." ];
+var tagLines = ["Feel beautiful!","Love the way you look!","Be yourself.", "Here's to the confident you!", "Love yourself.", "Fashion for the rest of us.", "Help others stay beautiful.", "Stay effortlessly trendy.", "Stay beautiful.", "Don't be afraid to be you." ];
 var tag_flag = 1;
+function randomTagLoad() {
+var quote;
+console.log(Math.floor((Math.random() * 1000) % tagLines.length));
+quote = tagLines[Math.floor((Math.random() * 1000) % tagLines.length)];
+$('#tag').text(quote);
+}
 function tagReload() {
 	$('#tag').fadeOut(function() {
 		$('#tag').text(tagLines[tag_flag]);
