@@ -273,6 +273,8 @@ h1 {
 	#nav a {
 		margin-left: 0px;
 		margin-right: 0px;
+		padding-left: 5px;
+		padding-right: 5px;
 	}
 	.content {
 		margin: 150px 6%;
