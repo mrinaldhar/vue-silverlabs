@@ -108,8 +108,8 @@ $('#tag').text(quote);
 }
 function tagReload() {
 	$('#tag').fadeOut(function() {
-		$('#tag').text(tagLines[tag_flag]);
 		tag_flag = ( tag_flag + 1 )%10;
+		$('#tag').text(tagLines[tag_flag]);
 		$('#tag').fadeIn();
 	});
 }
