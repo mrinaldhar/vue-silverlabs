@@ -99,11 +99,11 @@ function init() {
 	window.setInterval(tagReload, 5000);
 }
 var tagLines = ["Feel beautiful!","Love the way you look!","Be yourself.", "Here's to the confident you!", "Love yourself.", "Fashion for the rest of us.", "Help others stay beautiful.", "Stay effortlessly trendy.", "Stay beautiful.", "Don't be afraid to be you." ];
-var tag_flag = 1;
+var tag_flag;
 function randomTagLoad() {
 var quote;
-console.log(Math.floor((Math.random() * 1000) % tagLines.length));
-quote = tagLines[Math.floor((Math.random() * 1000) % tagLines.length)];
+tag_flag = Math.floor((Math.random() * 1000) % tagLines.length);
+quote = tagLines[tag_flag];
 $('#tag').text(quote);
 }
 function tagReload() {
